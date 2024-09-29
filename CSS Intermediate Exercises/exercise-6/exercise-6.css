@@ -1,0 +1,105 @@
+/* styles.css */
+
+/* CSS Variables for Theming */
+:root {
+    --header-bg-color: #009879;
+    --even-row-bg: #f3f3f3;
+    --odd-row-bg: #ffffff;
+    --hover-bg-color: #f1f1f1;
+    --text-color: #333333;
+    --font-family: Arial, sans-serif;
+    --table-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Removes space between borders */
+    margin: 20px 0;
+    font-size: 1em;
+    min-width: 400px;
+    background-color: #ffffff;
+    box-shadow: var(--table-shadow);
+}
+
+/* Table Caption Styling */
+table caption {
+    caption-side: top;
+    text-align: left;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #009879;
+}
+
+/* Table Header Styling */
+thead tr {
+    background-color: var(--header-bg-color);
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Table Data Styling */
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+/* Zebra Striping: Even Rows */
+tbody tr:nth-child(even) {
+    background-color: var(--even-row-bg);
+}
+
+/* Zebra Striping: Odd Rows */
+tbody tr:nth-child(odd) {
+    background-color: var(--odd-row-bg);
+}
+
+/* Table Cells Padding */
+th, td {
+    padding: 12px 15px;
+}
+
+/* Hover Effect on Rows */
+tbody tr:hover {
+    background-color: var(--hover-bg-color);
+    cursor: pointer;
+}
+
+/* Responsive Table */
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block; /* Makes the table elements block-level for stacking */
+    }
+
+    thead tr {
+        display: none; /* Hides the table header */
+    }
+
+    tbody tr {
+        margin-bottom: 15px; /* Adds space between rows */
+    }
+
+    tbody td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    tbody td::before {
+        content: attr(data-label); /* Uses the data-label attribute for labels */
+        position: absolute;
+        left: 15px;
+        width: calc(50% - 30px);
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+}

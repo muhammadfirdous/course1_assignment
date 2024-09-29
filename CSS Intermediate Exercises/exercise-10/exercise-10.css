@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    background-color: #f4f4f4;
+    padding: 20px;
+    overflow: auto;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    height: 2000px;
+    background-color: #fff;
+}

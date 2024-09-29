@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accessible Form</title>
+</head>
+<body>
+<h1>Contact Us</h1>
+
+<form action="/submit-form" method="POST" aria-labelledby="contact-form-title" novalidate>
+
+    <fieldset>
+        <legend >Please fill out the form below</legend>
+
+        <!-- Name Field -->
+        <div class="form-group">
+            <label for="name">Full Name <span aria-hidden="true">*</span></label>
+            <input type="text" name="name" required aria-required="true" aria-describedby="name-desc">
+            <small >Enter your first and last name.</small>
+        </div>
+
+        <div>
+            <label for="email">Email Address <span aria-hidden="true">*</span></label>
+            <input type="email" name="email" required aria-required="true" aria-describedby="email-desc email-error">
+            <small>We'll never share your email with anyone else.</small>
+            <span class="error-message" aria-live="polite"></span>
+        </div>
+
+        <div>
+            <label for="password">Password <span aria-hidden="true">*</span></label>
+            <input type="password" name="password" required aria-required="true" aria-describedby="password-desc">
+            <small>Choose a strong password.</small>
+        </div>
+
+        <div class="form-group">
+            <fieldset>
+                <legend>Gender</legend>
+                <div>
+                    <input type="radio" name="gender" value="male" aria-describedby="gender-desc">
+                    <label for="gender-male">Male</label>
+                </div>
+                <div>
+                    <input type="radio" name="gender" value="female" aria-describedby="gender-desc">
+                    <label for="gender-female">Female</label>
+                </div>
+                <div>
+                    <input type="radio" name="gender" value="other" aria-describedby="gender-desc">
+                    <label for="gender-other">Other</label>
+                </div>
+                <small>Select your gender.</small>
+            </fieldset>
+        </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Tooltip Example</title>
+  <link rel="stylesheet" href="exercise-5.css">
+</head>
+<body>
+
+<h2>CSS Tooltip Examples</h2>
+
+<p>
+  Hover over the
+  <span class="tooltip" tabindex="0" aria-describedby="tooltip1">
+      word
+      <span class="tooltip-text" id="tooltip1">This is the tooltip text for the word.</span>
+    </span>
+  to see the tooltip.
+</p>
+
+<p>
+  Click on the info icon
+  <span class="tooltip" tabindex="0" aria-describedby="tooltip2">
+      <i class="fas fa-info-circle"></i>
+      <span class="tooltip-text" id="tooltip2">This is the tooltip text for the icon.</span>
+    </span>
+  for more information.
+</p>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+.moving-element {
+    width: 100px;
+    height: 50px;
+    background-color: #4CAF50;
+    position: relative;
+    animation: moveRight 5s infinite;
+}
+
+@keyframes moveRight {
+    from {
+        left: 0;
+    }
+    to {
+        left: 90%;
+    }
+}

@@ -1,0 +1,32 @@
+.responsive-text {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+    .responsive-text {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+
+@media (min-width: 768px) {
+    .responsive-text {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+
+@media (min-width: 992px) {
+    .responsive-text {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+}
+
+@media (min-width: 1200px) {
+    .responsive-text {
+        font-size: 20px;
+        line-height: 1.8;
+    }
+}

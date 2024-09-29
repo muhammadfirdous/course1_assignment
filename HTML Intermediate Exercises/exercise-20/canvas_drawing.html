@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas Drawing Example</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    canvas {
+      border: 2px solid #333;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="400"></canvas>
+
+<script>
+  const canvas = document.getElementById('myCanvas');
+
+  if (canvas.getContext) {
+    const ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = '#FF0000';
+    ctx.fillRect(50, 50, 150, 100);
+
+    ctx.strokeStyle = '#0000FF';
+    ctx.lineWidth = 5;
+    ctx.strokeRect(250, 50, 150, 100);
+
+    ctx.beginPath();
+    ctx.arc(125, 250, 50, 0, Math.PI * 2, false);
+    ctx.fillStyle = '#00FF00';
+    ctx.fill();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.arc(375, 250, 50, 0, Math.PI * 2, false);
+    ctx.strokeStyle = '#FFA500';
+    ctx.lineWidth = 5;
+    ctx.stroke();
+    ctx.closePath();
+  } else {
+    alert('Your browser does not support HTML5 Canvas.');
+  }
+</script>
+</body>
+</html>
